@@ -2,12 +2,22 @@
 export type Language = 'ar' | 'fr' | 'en';
 
 // User profile types
+export interface ChildProfile {
+  name?: string;
+  age?: number;
+  ageRange?: string;
+  preferredThemes?: string[];
+  sensitivities?: string[];
+  favoriteCharacters?: string[];
+}
+
 export interface UserProfile {
   name?: string;
   ageGroup?: 'young-adult' | 'adult' | 'middle-aged' | 'senior';
   hasChildren?: boolean;
   language: Language;
   answers: QuestionnaireAnswers;
+  childProfile?: ChildProfile;
 }
 
 // Questionnaire types

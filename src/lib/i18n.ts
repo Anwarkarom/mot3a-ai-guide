@@ -110,6 +110,17 @@ const translations: Record<Language, Record<string, string>> = {
     'section.spiritual': 'المحتوى الروحي',
     'section.kids': 'محتوى الأطفال',
 
+    // Kids stories
+    'kids.story.title': 'اصنع قصة ما قبل النوم',
+    'kids.story.subtitle': 'أدخل الجملة الأولى ودع الذكاء الاصطناعي يكمل حكاية هادئة لطفلك',
+    'kids.story.placeholder': 'مثال: في ليلة هادئة، كانت ريم تنظر إلى النجوم من نافذة غرفتها...',
+    'kids.story.button': 'أكمل القصة',
+    'kids.story.loading': 'جاري نسج القصة بهدوء...',
+    'kids.story.helper': 'نستخدم تفضيلات طفلك لإنشاء قصة مريحة وآمنة قبل النوم',
+    'kids.story.missingStarter': 'اكتب الجملة الأولى قبل إكمال القصة',
+    'kids.story.resultTitle': 'القصة الكاملة',
+    'kids.story.error': 'حدث خطأ أثناء إنشاء القصة. حاول مرة أخرى.',
+
     // Settings
     'settings.title': 'الإعدادات',
     'settings.language': 'اللغة',
@@ -232,6 +243,17 @@ const translations: Record<Language, Record<string, string>> = {
     'section.spiritual': 'Contenu spirituel',
     'section.kids': 'Contenu pour enfants',
 
+    // Kids stories
+    'kids.story.title': 'Crée ton histoire du coucher',
+    'kids.story.subtitle': "Écris la première phrase et laisse l'IA compléter un récit doux pour ton enfant",
+    'kids.story.placeholder': 'Exemple : Par une nuit calme, Lina regardait les étoiles depuis sa fenêtre...',
+    'kids.story.button': 'Compléter l’histoire',
+    'kids.story.loading': 'Nous tissons une histoire apaisante...',
+    'kids.story.helper': 'Nous utilisons les préférences de votre enfant pour créer un récit rassurant',
+    'kids.story.missingStarter': 'Écrivez la première phrase avant de compléter le récit',
+    'kids.story.resultTitle': "L'histoire complète",
+    'kids.story.error': "Une erreur s'est produite lors de la génération de l'histoire. Réessayez.",
+
     // Settings
     'settings.title': 'Paramètres',
     'settings.language': 'Langue',
@@ -353,6 +375,17 @@ const translations: Record<Language, Record<string, string>> = {
     'section.entertainment': 'Entertainment & Recharge',
     'section.spiritual': 'Spiritual Content',
     'section.kids': 'Kids Content',
+
+    // Kids stories
+    'kids.story.title': 'Create your bedtime story',
+    'kids.story.subtitle': 'Write the first sentence and let AI finish a calm story for your child',
+    'kids.story.placeholder': 'Example: On a quiet night, Layla watched the stars from her bedroom window...',
+    'kids.story.button': 'Complete story',
+    'kids.story.loading': 'We are gently weaving the story...',
+    'kids.story.helper': 'We use your child preferences to create a safe, soothing bedtime tale',
+    'kids.story.missingStarter': 'Write the first sentence before completing the story',
+    'kids.story.resultTitle': 'Full story',
+    'kids.story.error': 'Something went wrong while creating the story. Please try again.',
 
     // Settings
     'settings.title': 'Settings',
