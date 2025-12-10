@@ -6,6 +6,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Baby, BookOpen, Palette, Dumbbell, Gamepad2, Sparkles, Loader2 } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 import { ChildProfile } from '@/types';
 
 const Kids: React.FC = () => {
@@ -102,26 +103,25 @@ const Kids: React.FC = () => {
     setGeneratedStory('');
 
     try {
-      const response = await fetch('/api/generateStory', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
+      const { data, error: fnError } = await supabase.functions.invoke('generate-story', {
+        body: {
           storyStarter,
           childProfile: derivedChildProfile,
           language,
-        }),
+        },
       });
 
-      const data = await response.json();
+      if (fnError) {
+        throw new Error(fnError.message || 'Failed to generate story');
+      }
 
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to generate story');
+      if (data?.error) {
+        throw new Error(data.error);
       }
 
       setGeneratedStory(data.story);
     } catch (err) {
+      console.error('Story generation error:', err);
       setError(t('kids.story.error', language));
     } finally {
       setIsGenerating(false);
